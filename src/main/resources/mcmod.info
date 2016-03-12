@@ -1,0 +1,17 @@
+[
+{
+  "modid": "MyFirstMod",
+  "name": "My First Mod",
+  "description": "My first mod! Following Pahimar's tutorial!",
+  "version": "1.7.10-1.0",
+  "mcversion": "1.7.10",
+  "url": "https://github.com/T10a/myfirstmod",
+  "updateUrl": "",
+  "authorList": ["t10a"],
+  "credits": "Me for making the mod, and Pahimar for the tutorial!",
+  "logoFile": "",
+  "screenshots": [],
+  "parent":"",
+  "dependencies": []
+}
+]
