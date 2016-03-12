@@ -1,2 +1,2 @@
-# basicthings
-A basic, Minetweakable set of machines
+# myfirstmod
+My first (maybe) Java-based mod!
