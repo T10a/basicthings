@@ -1,5 +1,6 @@
 package com.t10a.myfirstmod;
 
+import com.t10a.myfirstmod.configuration.ConfigurationHandler;
 import com.t10a.myfirstmod.proxy.IProxy;
 import com.t10a.myfirstmod.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -14,13 +15,13 @@ public class MyFirstMod
     @Mod.Instance(Reference.MOD_ID)
     public static MyFirstMod instance;
 
-    @SidedProxy(clientSide = "com.t10a.myfirstmod.proxy.ClientProxy", serverSide = "com.t10a.myfirstmod.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event)
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
