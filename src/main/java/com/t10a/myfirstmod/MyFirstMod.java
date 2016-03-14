@@ -1,9 +1,11 @@
 package com.t10a.myfirstmod;
 
 import com.t10a.myfirstmod.handler.ConfigurationHandler;
+import com.t10a.myfirstmod.init.ModItems;
 import com.t10a.myfirstmod.proxy.IProxy;
 import com.t10a.myfirstmod.reference.Reference;
 import com.t10a.myfirstmod.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,7 +25,9 @@ public class MyFirstMod
     public void preinit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialisation Complete!");
+        ModItems.init();
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
