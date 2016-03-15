@@ -25,6 +25,7 @@ public class ItemMFM extends Item
     public String getUnlocalizedName(ItemStack itemStack)
     {
         return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        //Returns as a name of the form: item.modid:item name.name
     }
 
     @Override
