@@ -12,6 +12,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class MyFirstMod
@@ -42,5 +43,14 @@ public class MyFirstMod
     public void postinit(FMLPostInitializationEvent event)
     {
         LogHelper.info("Post Initialisation Complete!");
+
+        /*
+        for (String oreName : OreDictionary.getOreNames())
+        {
+            LogHelper.info(oreName);
+            // Usage: OreDictionary.getOres("name of the item that you want to list the uses of).
+            OreDictionary.getOres(oreName);
+        }
+        */
     }
 }
