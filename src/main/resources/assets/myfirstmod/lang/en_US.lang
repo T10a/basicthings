@@ -3,3 +3,6 @@ item.myfirstmod:eucalyptusLeaf.name=Eucalyptus Leaf of Epicness
 
 # Block localisation
 tile.myfirstmod:flag.name=Aussie Flag of Awesomeness
+
+# Other localisation
+itemGroup.myfirstmod=My First Mod
