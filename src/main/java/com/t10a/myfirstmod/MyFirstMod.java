@@ -3,6 +3,7 @@ package com.t10a.myfirstmod;
 import com.t10a.myfirstmod.handler.ConfigurationHandler;
 import com.t10a.myfirstmod.init.ModBlocks;
 import com.t10a.myfirstmod.init.ModItems;
+import com.t10a.myfirstmod.init.Recipes;
 import com.t10a.myfirstmod.proxy.IProxy;
 import com.t10a.myfirstmod.reference.Reference;
 import com.t10a.myfirstmod.utility.LogHelper;
@@ -37,20 +38,12 @@ public class MyFirstMod
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Initialisation Complete!");
     }
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event)
     {
         LogHelper.info("Post Initialisation Complete!");
-
-        /*
-        for (String oreName : OreDictionary.getOreNames())
-        {
-            LogHelper.info(oreName);
-            // Usage: OreDictionary.getOres("name of the item that you want to list the uses of).
-            OreDictionary.getOres(oreName);
-        }
-        */
     }
 }
