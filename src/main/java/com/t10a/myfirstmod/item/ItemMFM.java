@@ -1,5 +1,6 @@
 package com.t10a.myfirstmod.item;
 
+import com.t10a.myfirstmod.creativetab.CreativeTabMFM;
 import com.t10a.myfirstmod.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,6 +14,7 @@ public class ItemMFM extends Item
     public ItemMFM()
     {
         super();
+        this.setCreativeTab(CreativeTabMFM.MFM_TAB);
     }
 
     @Override

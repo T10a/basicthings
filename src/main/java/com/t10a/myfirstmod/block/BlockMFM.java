@@ -1,5 +1,6 @@
 package com.t10a.myfirstmod.block;
 
+import com.t10a.myfirstmod.creativetab.CreativeTabMFM;
 import com.t10a.myfirstmod.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,11 +13,13 @@ public class BlockMFM extends Block
     public BlockMFM(Material material)
     {
         super (material);
+        this.setCreativeTab(CreativeTabMFM.MFM_TAB);
     }
 
     public BlockMFM()
     {
         this(Material.rock);
+        this.setCreativeTab(CreativeTabMFM.MFM_TAB);
     }
 
     @Override
