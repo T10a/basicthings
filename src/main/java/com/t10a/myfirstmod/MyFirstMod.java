@@ -1,5 +1,6 @@
 package com.t10a.myfirstmod;
 
+import com.t10a.myfirstmod.client.handler.KeyInputEventHandler;
 import com.t10a.myfirstmod.handler.ConfigurationHandler;
 import com.t10a.myfirstmod.init.ModBlocks;
 import com.t10a.myfirstmod.init.ModItems;
@@ -29,15 +30,19 @@ public class MyFirstMod
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.info("Pre Initialisation Complete!");
+
+        proxy.registerKeyBindings();
 
         ModItems.init();
 
         ModBlocks.init();
+
+        LogHelper.info("Pre Initialisation Complete!");
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         Recipes.init();
         LogHelper.info("Initialisation Complete!");
     }

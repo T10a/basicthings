@@ -4,5 +4,10 @@ item.myfirstmod:eucalyptusLeaf.name=Eucalyptus Leaf of Epicness
 # Block localisation
 tile.myfirstmod:flag.name=Aussie Flag of Awesomeness
 
-# Other localisation
+# Creative Tab localisation
 itemGroup.myfirstmod=My First Mod
+
+# Keybind localisation
+keys.myfirstmod.category=My First Mod
+keys.myfirstmod.charge=Charge
+keys.myfirstmod.release=Release
